@@ -24,7 +24,7 @@ struct ContentView: View {
                 .padding()
 
                 NavigationLink(destination: routerBar.navigateToBarChartSwiftUIView()) {
-                    Text("Ver Gráfico de Línea (Dummy 1)")
+                    Text("Ver Gráfico de barras")
                         .padding()
                         .background(Color.green)
                         .foregroundColor(.white)
@@ -33,7 +33,7 @@ struct ContentView: View {
                 .padding()
 
                 NavigationLink(destination: routerLine.navigateToLineChartSwiftUIView()) {
-                    Text("Ver Gráfico de Barra (Dummy 2)")
+                    Text("Ver Gráfico de lineas")
                         .padding()
                         .background(Color.orange)
                         .foregroundColor(.white)
@@ -41,14 +41,6 @@ struct ContentView: View {
                 }
                 .padding()
 
-                NavigationLink(destination: router.navigateToPieChartMainView()) {
-                    Text("Ver Gráfico de Dispersión (Dummy 3)")
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
             }
             .navigationTitle("Menú Principal")
         }
