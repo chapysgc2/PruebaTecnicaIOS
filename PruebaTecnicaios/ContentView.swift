@@ -9,6 +9,7 @@ import SwiftUI
 struct ContentView: View {
     let router = PieChartRouter()
     let routerBar = BarChartRouter()
+    let routerLine = LineChartRouter()
 
     var body: some View {
         NavigationView {
@@ -31,7 +32,7 @@ struct ContentView: View {
                 }
                 .padding()
 
-                NavigationLink(destination: router.navigateToPieChartMainView()) {
+                NavigationLink(destination: routerLine.navigateToLineChartSwiftUIView()) {
                     Text("Ver Gráfico de Barra (Dummy 2)")
                         .padding()
                         .background(Color.orange)
