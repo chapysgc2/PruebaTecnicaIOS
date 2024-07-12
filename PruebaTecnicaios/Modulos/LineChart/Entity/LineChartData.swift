@@ -2,19 +2,21 @@
 //  LineChartData.swift
 //  PruebaTecnicaios
 //
-//  Created by Hazel Alain on 11/07/24.
+//  Created by Hazel Alain on 10/07/24.
 //
 
 import Foundation
 import SwiftUI
 
 struct LineChartDataEntry: Codable {
+    let promotor: Int
     let nombrE_PROMOTOR: String
     let abiertos: Int
     let cerrados: Int
     let nO_INTERESADOS: Int
     let foto: String?
 }
+
 
 struct LineChartDataResponse: Codable {
     let data: [LineChartDataEntry]
@@ -24,16 +26,19 @@ struct LineChartDataResponse: Codable {
     }
 }
 
+
 struct LineChartSegment {
     let value: Double
     let label: String
-    let color: Color // Asegúrate de agregar esta propiedad
+    let color: Color
+    let values: [Double]
     
-    // Constructor que acepta un color
-    init(value: Double, label: String, color: Color) {
+    init(value: Double, label: String, color: Color, values: [Double]) {
         self.value = value
         self.label = label
         self.color = color
+        self.values = values
     }
 }
+
 

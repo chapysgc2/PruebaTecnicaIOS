@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8229B6A62C40F62E003C8111 /* LineChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229B6A52C40F62E003C8111 /* LineChartInteractor.swift */; };
 		82DF8D152C40AC42008B7F34 /* PruebaTecnicaiosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D142C40AC42008B7F34 /* PruebaTecnicaiosApp.swift */; };
 		82DF8D192C40AC44008B7F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82DF8D182C40AC44008B7F34 /* Assets.xcassets */; };
 		82DF8D1C2C40AC44008B7F34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82DF8D1B2C40AC44008B7F34 /* Preview Assets.xcassets */; };
@@ -32,7 +33,6 @@
 		82DF8D7C2C40C6CA008B7F34 /* BarChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D7B2C40C6CA008B7F34 /* BarChartSwiftUIView.swift */; };
 		82DF8D7E2C40C6F4008B7F34 /* BarChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D7D2C40C6F4008B7F34 /* BarChartViewModel.swift */; };
 		82DF8D822C40C840008B7F34 /* BarChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D812C40C840008B7F34 /* BarChartRouter.swift */; };
-		82DF8D8A2C40EF4C008B7F34 /* LineChartInteractor\.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D892C40EF4C008B7F34 /* LineChartInteractor\.swift */; };
 		82DF8D8C2C40EF72008B7F34 /* LineChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D8B2C40EF72008B7F34 /* LineChartPresenter.swift */; };
 		82DF8D8F2C40EF92008B7F34 /* LineChartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D8E2C40EF92008B7F34 /* LineChartProtocols.swift */; };
 		82DF8D912C40EFAC008B7F34 /* LineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF8D902C40EFAC008B7F34 /* LineChartData.swift */; };
@@ -60,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8229B6A52C40F62E003C8111 /* LineChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartInteractor.swift; sourceTree = "<group>"; };
 		82DF8D112C40AC42008B7F34 /* PruebaTecnicaios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DF8D142C40AC42008B7F34 /* PruebaTecnicaiosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaiosApp.swift; sourceTree = "<group>"; };
 		82DF8D182C40AC44008B7F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		82DF8D7B2C40C6CA008B7F34 /* BarChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartSwiftUIView.swift; sourceTree = "<group>"; };
 		82DF8D7D2C40C6F4008B7F34 /* BarChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewModel.swift; sourceTree = "<group>"; };
 		82DF8D812C40C840008B7F34 /* BarChartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartRouter.swift; sourceTree = "<group>"; };
-		82DF8D892C40EF4C008B7F34 /* LineChartInteractor\.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineChartInteractor\\.swift"; sourceTree = "<group>"; };
 		82DF8D8B2C40EF72008B7F34 /* LineChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartPresenter.swift; sourceTree = "<group>"; };
 		82DF8D8E2C40EF92008B7F34 /* LineChartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartProtocols.swift; sourceTree = "<group>"; };
 		82DF8D902C40EFAC008B7F34 /* LineChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartData.swift; sourceTree = "<group>"; };
@@ -187,7 +187,6 @@
 		82DF8D432C40AC63008B7F34 /* Modulos */ = {
 			isa = PBXGroup;
 			children = (
-				82DF8D8D2C40EF87008B7F34 /* Protocols */,
 				82DF8D832C40EF1F008B7F34 /* LineChart */,
 				82DF8D642C40C337008B7F34 /* BarChart */,
 				82DF8D442C40AC72008B7F34 /* PieChart */,
@@ -324,6 +323,7 @@
 		82DF8D832C40EF1F008B7F34 /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
+				82DF8D8D2C40EF87008B7F34 /* Protocols */,
 				82DF8D882C40EF41008B7F34 /* Router */,
 				82DF8D872C40EF3C008B7F34 /* Entity */,
 				82DF8D862C40EF35008B7F34 /* Presenter */,
@@ -346,7 +346,7 @@
 		82DF8D852C40EF2F008B7F34 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				82DF8D892C40EF4C008B7F34 /* LineChartInteractor\.swift */,
+				8229B6A52C40F62E003C8111 /* LineChartInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -519,7 +519,6 @@
 				82DF8D992C40F0BB008B7F34 /* LineChartRouter.swift in Sources */,
 				82DF8D822C40C840008B7F34 /* BarChartRouter.swift in Sources */,
 				82DF8D502C40ADE7008B7F34 /* PieChartProtocols.swift in Sources */,
-				82DF8D8A2C40EF4C008B7F34 /* LineChartInteractor\.swift in Sources */,
 				82DF8D612C40C006008B7F34 /* ContentView.swift in Sources */,
 				82DF8D8F2C40EF92008B7F34 /* LineChartProtocols.swift in Sources */,
 				82DF8D782C40C5D3008B7F34 /* BarChartView.swift in Sources */,
@@ -527,6 +526,7 @@
 				82DF8D912C40EFAC008B7F34 /* LineChartData.swift in Sources */,
 				82DF8D8C2C40EF72008B7F34 /* LineChartPresenter.swift in Sources */,
 				82DF8D5F2C40B931008B7F34 /* PieChartViewModel.swift in Sources */,
+				8229B6A62C40F62E003C8111 /* LineChartInteractor.swift in Sources */,
 				82DF8D7E2C40C6F4008B7F34 /* BarChartViewModel.swift in Sources */,
 				82DF8D4B2C40ACBB008B7F34 /* PieChartView.swift in Sources */,
 				82DF8D7C2C40C6CA008B7F34 /* BarChartSwiftUIView.swift in Sources */,

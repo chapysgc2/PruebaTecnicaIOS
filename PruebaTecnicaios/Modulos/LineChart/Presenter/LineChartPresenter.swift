@@ -2,7 +2,7 @@
 //  LineChartPresenter.swift
 //  PruebaTecnicaios
 //
-//  Created by Hazel Alain on 11/07/24.
+//  Created by Hazel Alain on 10/07/24.
 //
 
 
@@ -22,7 +22,12 @@ class LineChartPresenter: LineChartPresenterProtocol {
         var segments: [LineChartSegment] = []
 
         for entry in entries {
-            let segment = LineChartSegment(value: Double(entry.abiertos), label: entry.nombrE_PROMOTOR, color: .blue)
+            let segment = LineChartSegment(
+                value: Double(entry.abiertos),
+                label: entry.nombrE_PROMOTOR,
+                color: .blue,
+                values: [Double(entry.abiertos), Double(entry.cerrados), Double(entry.nO_INTERESADOS)]
+            )
             segments.append(segment)
         }
 
@@ -30,3 +35,4 @@ class LineChartPresenter: LineChartPresenterProtocol {
         return segments
     }
 }
+

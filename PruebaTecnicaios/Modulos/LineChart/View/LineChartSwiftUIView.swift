@@ -2,7 +2,7 @@
 //  LineChartSwiftUIView.swift
 //  PruebaTecnicaios
 //
-//  Created by Hazel Alain on 11/07/24.
+//  Created by Hazel Alain on 10/07/24.
 //
 
 import SwiftUI
@@ -22,14 +22,8 @@ struct LineChartSwiftUIView: View {
         }
         .onAppear {
             viewModel.fetchLineChartData()
+            print("onAppear called")
         }
     }
 }
 
-struct LineChartSwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        let interactor = LineChartInteractor()
-        let viewModel = LineChartViewModel(interactor: interactor)
-        return LineChartSwiftUIView(viewModel: viewModel)
-    }
-}

@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  PruebaTecnicaios
 //
-//  Created by Hazel Alain on 11/07/24.
+//  Created by Hazel Alain on 10/07/24.
 //
 
 import SwiftUI

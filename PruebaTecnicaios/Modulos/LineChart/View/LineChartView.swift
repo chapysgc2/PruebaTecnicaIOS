@@ -2,7 +2,7 @@
 //  LineChartView.swift
 //  PruebaTecnicaios
 //
-//  Created by Hazel Alain on 11/07/24.
+//  Created by Hazel Alain on 10/07/24.
 //
 
 import SwiftUI
@@ -16,19 +16,35 @@ struct LineChartView: View {
                 .font(.title)
                 .padding()
 
-            ScrollView {
-                VStack(spacing: 20) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) { // <-- Cambiado a HStack para alinear horizontalmente
                     ForEach(segments, id: \.label) { segment in
-                        VStack {
-                            Text("\(segment.label): \(Int(segment.value))")
-                                .foregroundColor(.primary)
-                                .font(.headline)
-                                .padding(.bottom, 5)
-                            Rectangle()
-                                .fill(segment.color)
-                                .frame(width: CGFloat(segment.value * 5), height: 30)
-                                .cornerRadius(8)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(segment.label)
+                                    .font(.headline)
+                                    .foregroundColor(.primary)
+                                Spacer()
+                                Text("\(Int(segment.value))")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+
+                            GeometryReader { geometry in // <-- Usamos GeometryReader
+                                ZStack(alignment: .leading) {
+                                    Rectangle()
+                                        .fill(Color.gray.opacity(0.2))
+                                        .frame(width: geometry.size.width, height: 30) // <-- Ancho completo
+                                        .cornerRadius(8)
+                                    Rectangle()
+                                        .fill(segment.color)
+                                        .frame(width: min(CGFloat(segment.value * 5), geometry.size.width), height: 30)
+                                        // <-- Ancho mínimo del contenedor
+                                        .cornerRadius(8)
+                                }
+                            }
                         }
+                        .padding(.horizontal)
                     }
                 }
                 .padding()
@@ -37,8 +53,4 @@ struct LineChartView: View {
     }
 }
 
-struct LineChartView_Previews: PreviewProvider {
-    static var previews: some View {
-        LineChartView(segments: [])
-    }
-}
+
